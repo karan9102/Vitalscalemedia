@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VitalScale Media - Digital Marketing & Video Editing Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    /* Global Slide-Up Animation Classes */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
 </head>
 <body class="bg-slate-950 text-white font-sans antialiased selection:bg-blue-600 selection:text-white">
 
@@ -106,27 +119,91 @@
         </div>
     </section>
 
-<!-- 3. Stats Section -->
-    <section class="py-16 bg-slate-900/50 border-y border-slate-900">
+<!-- Animated Stats Section with Slide-Up & Counting Effect -->
+    <section id="stats-section" class="py-20 bg-slate-900/50 border-y border-slate-900">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2">7+</h3>
+            
+            <!-- Stat 1 -->
+            <div class="transform translate-y-6 opacity-0 transition-all duration-700 ease-out stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="7" data-suffix="+">0+</h3>
                 <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Years Experience</p>
             </div>
-            <div>
-                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2">25+</h3>
+
+            <!-- Stat 2 -->
+            <div class="transform translate-y-6 opacity-0 transition-all duration-700 ease-out delay-100 stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="25" data-suffix="+">0+</h3>
                 <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Team Members</p>
             </div>
-            <div>
-                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2">300+</h3>
+
+            <!-- Stat 3 -->
+            <div class="transform translate-y-6 opacity-0 transition-all duration-700 ease-out delay-200 stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="300" data-suffix="+">0+</h3>
                 <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Happy Clients Globally</p>
             </div>
-            <div>
-                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2">40,500+</h3>
+
+            <!-- Stat 4 -->
+            <div class="transform translate-y-6 opacity-0 transition-all duration-700 ease-out delay-300 stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="40500" data-suffix="+" data-comma="true">0+</h3>
                 <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Video Edited</p>
             </div>
+
         </div>
     </section>
+
+    <!-- JavaScript for Counting & Slide-Up Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const statsSection = document.getElementById("stats-section");
+            const statCards = document.querySelectorAll(".stat-card");
+            const counters = document.querySelectorAll(".stat-card h3");
+            let animated = false;
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !animated) {
+                        animated = true;
+
+                        // 1. Slide-up and Fade-in Animation
+                        statCards.forEach(card => {
+                            card.classList.remove("translate-y-6", "opacity-0");
+                        });
+
+                        // 2. Number Counting Animation
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute("data-target");
+                            const suffix = counter.getAttribute("data-suffix") || "";
+                            const useComma = counter.getAttribute("data-comma") === "true";
+                            let current = 0;
+                            const duration = 2000; // 2 seconds animation duration
+                            const increment = target / (duration / 16); // 60fps
+
+                            const updateCounter = () => {
+                                current += increment;
+                                if (current < target) {
+                                    let displayValue = Math.floor(current);
+                                    if (useComma) {
+                                        displayValue = displayValue.toLocaleString();
+                                    }
+                                    counter.textContent = displayValue + suffix;
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    let finalValue = target;
+                                    if (useComma) {
+                                        finalValue = finalValue.toLocaleString();
+                                    }
+                                    counter.textContent = finalValue + suffix;
+                                }
+                            };
+
+                            updateCounter();
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(statsSection);
+        });
+    </script>
 
     <!-- 4. Core Video Editing Services Grid -->
     <section class="py-24 px-6 max-w-7xl mx-auto">
@@ -475,5 +552,27 @@
             © 2026 VitalScale Media. All Rights Reserved.
         </div>
     </footer>
+    
+    <!-- Global Slide-Up Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll(".reveal").forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
 </body>
 </html>
