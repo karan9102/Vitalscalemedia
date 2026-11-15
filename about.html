@@ -48,21 +48,33 @@
         </div>
     </section>
 
-    <!-- Main Content Section matching your reference -->
+    <!-- Main Content Section -->
     <section class="py-24 px-6 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
-            <!-- Left Side: Image / Showcase Box -->
-            <div class="relative group cursor-pointer reveal">
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
-                <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 overflow-hidden shadow-2xl">
-                    <div class="aspect-video bg-slate-950 rounded-xl flex items-center justify-center border border-slate-800 text-slate-500 text-sm">
-                        <img src="karan.jpg" alt="VitalScale Media Workspace" class="w-full h-full object-cover rounded-xl">
+            <!-- Left Side: Image / Showcase Grid -->
+            <div class="space-y-6 reveal">
+                <!-- Main Big Card -->
+                <div class="relative group cursor-pointer">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
+                    <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-4 overflow-hidden shadow-2xl">
+                        <div class="aspect-video bg-slate-950 rounded-xl flex items-center justify-center border border-slate-800 overflow-hidden">
+                            <img src="karan.jpg" alt="Workspace 1" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                    </div>
+                </div>
+                <!-- Two Smaller Images Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 overflow-hidden aspect-video flex items-center justify-center">
+                        <img src="karan.jpg" alt="Workspace 2" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 overflow-hidden aspect-video flex items-center justify-center">
+                        <img src="karan.jpg" alt="Workspace 3" class="w-full h-full object-cover rounded-lg">
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Text & Story -->
+            <!-- Right Side: Text & Story matching your screenshot -->
             <div class="reveal">
                 <span class="inline-block py-1 px-3 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-4 uppercase tracking-wider">
                     About Us
@@ -70,19 +82,50 @@
                 <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
                     Let's make great things
                 </h2>
-                <div class="space-y-4 text-slate-300 text-base md:text-lg leading-relaxed">
+                <div class="space-y-4 text-slate-300 text-base md:text-lg leading-relaxed mb-6">
                     <p>
-                        At VitalScale Media, every pixel is infused with creativity, and every frame tells a compelling story. We understand the power of visual storytelling and its impact on your audience.
+                        At VitalScale Media, every pixel is infused with creativity, and every frame tells a compelling story. We understand the power of visual storytelling and its impact on your audience. With a dedication to excellence and precision, we craft captivating videos that inspire and deliver meaningful results. Your vision is our top priority, and we ensure timely delivery on every project.
                     </p>
                     <p>
-                        With a dedication to excellence and precision, we craft captivating videos that inspire and deliver meaningful results. Your vision is our top priority, and we ensure timely delivery on every project.
+                        We don't just meet expectations - we exceed them. Let's bring your ideas to life and create something extraordinary together.
                     </p>
                 </div>
-                <div class="mt-8">
+                <div>
                     <a href="contact.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all duration-300">
-                        Get in Touch
+                        Contact Now
                     </a>
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats Counters Section matching your screenshot -->
+    <section class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            
+            <!-- Stat 1 -->
+            <div class="reveal bg-slate-900 border border-slate-800 p-6 rounded-2xl stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="7" data-suffix="+">0+</h3>
+                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Years Experience</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="reveal delay-100 bg-slate-900 border border-slate-800 p-6 rounded-2xl stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="25" data-suffix="+">0+</h3>
+                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Team Members</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="reveal delay-200 bg-slate-900 border border-slate-800 p-6 rounded-2xl stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="300" data-suffix="+">0+</h3>
+                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Happy Client</p>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="reveal delay-300 bg-slate-900 border border-slate-800 p-6 rounded-2xl stat-card">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-2" data-target="40500" data-suffix="+" data-comma="true">0+</h3>
+                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-wider">Video Edited</p>
             </div>
 
         </div>
@@ -93,10 +136,11 @@
         <p>© 2026 VitalScale Media. All Rights Reserved.</p>
     </footer>
 
-    <!-- Global Slide-Up Animation Script -->
+    <!-- Global Slide-Up & Counting Script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
+            // 1. Reveal Animation
+            const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("active");
@@ -105,7 +149,51 @@
             }, { threshold: 0.15 });
 
             document.querySelectorAll(".reveal").forEach(el => {
-                observer.observe(el);
+                revealObserver.observe(el);
+            });
+
+            // 2. Counting Animation
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const counter = card.querySelector("[data-target]");
+                        if (counter && !counter.classList.contains("counted")) {
+                            counter.classList.add("counted");
+                            
+                            const target = +counter.getAttribute("data-target");
+                            const suffix = counter.getAttribute("data-suffix") || "";
+                            const isComma = counter.getAttribute("data-comma") === "true";
+                            
+                            let duration = 2000;
+                            let startTimestamp = null;
+
+                            const step = (timestamp) => {
+                                if (!startTimestamp) startTimestamp = timestamp;
+                                let progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                                let easedProgress = 1 - Math.pow(1 - progress, 3);
+                                let currentVal = Math.floor(easedProgress * target);
+
+                                if (isComma) {
+                                    counter.innerText = currentVal.toLocaleString() + suffix;
+                                } else {
+                                    counter.innerText = currentVal + suffix;
+                                }
+
+                                if (progress < 1) {
+                                    window.requestAnimationFrame(step);
+                                } else {
+                                    counter.innerText = (isComma ? target.toLocaleString() : target) + suffix;
+                                }
+                            };
+                            window.requestAnimationFrame(step);
+                        }
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll(".stat-card").forEach(card => {
+                countObserver.observe(card);
             });
         });
     </script>
