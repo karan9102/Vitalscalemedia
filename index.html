@@ -559,23 +559,74 @@
         </div>
     </footer>
     
-    <!-- Global Slide-Up Animation Script -->
+    <!-- Global Slide-Up & Universal Counting Animation Script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const observerOptions = {
-                threshold: 0.15
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
+            // 1. Reveal Animation Observer (Slide-up for sections/texts)
+            const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("active");
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.15 });
 
             document.querySelectorAll(".reveal").forEach(el => {
-                observer.observe(el);
+                revealObserver.observe(el);
+            });
+
+            // 2. Universal Counting Animation Observer for ALL Stat Cards
+            const countObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const counter = card.querySelector("[data-target]");
+                        if (counter && !counter.classList.contains("counted")) {
+                            counter.classList.add("counted");
+                            
+                            const target = +counter.getAttribute("data-target");
+                            const suffix = counter.getAttribute("data-suffix") || "";
+                            const isComma = counter.getAttribute("data-comma") === "true";
+                            
+                            let duration = 2000; // 2 seconds
+                            let startTimestamp = null;
+
+                            const step = (timestamp) => {
+                                if (!startTimestamp) startTimestamp = timestamp;
+                                let progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                                
+                                // Smooth easing
+                                let easedProgress = 1 - Math.pow(1 - progress, 3);
+                                let currentVal = Math.floor(easedProgress * target);
+
+                                if (isComma) {
+                                    counter.innerText = currentVal.toLocaleString() + suffix;
+                                } else {
+                                    counter.innerText = currentVal + suffix;
+                                }
+
+                                if (progress < 1) {
+                                    window.requestAnimationFrame(step);
+                                } else {
+                                    if (isComma) {
+                                        counter.innerText = target.toLocaleString() + suffix;
+                                    } else {
+                                        counter.innerText = target + suffix;
+                                    }
+                                }
+                            };
+                            window.requestAnimationFrame(step);
+
+                            // Trigger slide-up style for the card
+                            card.classList.remove("translate-y-6", "opacity-0");
+                            card.classList.add("translate-y-0", "opacity-100");
+                        }
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll(".stat-card").forEach(card => {
+                countObserver.observe(card);
             });
         });
     </script>
