@@ -90,9 +90,10 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
             <!-- Left Side Video Player / Embedded Sample -->
-<div class="rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
-    <div class="relative w-full" style="padding-top: 56.25%;">
-        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/GHdS0FrCdME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<<div class="rounded-2xl overflow-hidden shadow-2xl bg-slate-900 border border-slate-800">
+    <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+        <!-- iframe me scale aur translate laga diya hai taaki extra hissa crop ho jaye -->
+        <iframe class="absolute top-0 left-0 w-full h-[140%] -top-[20%] scale-110" src="https://www.youtube.com/embed/GHdS0FrCdME?controls=1&modestbranding=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
             <!-- Right Side Content -->
