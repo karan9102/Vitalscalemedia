@@ -20,20 +20,24 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-    <!-- Page Header with Perfect Background Image Fit -->
-    <section class="relative min-h-[50vh] flex items-center justify-center text-center px-6 pt-44 pb-28 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.95)), url('karan.jpg');">
-        <div class="relative z-10 max-w-3xl mx-auto reveal">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 tracking-tight uppercase text-white">
-                Popular Services
-            </h1>
-            <p class="text-slate-400 text-sm md:text-base">
-                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a> > <span class="text-blue-400">Popular Service</span>
-            </p>
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                <span class="text-blue-500">VitalScale</span> Media
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-blue-400 transition-colors">About Us</a>
+                <a href="video-editing.html" class="hover:text-blue-400 transition-colors">Video Editing</a>
+                <a href="advertising.html" class="text-blue-400 font-semibold">Popular Service</a>
+                <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Us</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-   <!-- Page Header with Background Image -->
-    <section class="relative min-h-[45vh] flex items-center justify-center text-center px-6 pt-32 pb-16 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)), url('profile.png');">
+    <!-- Page Header with Background Image (Single Clean Header) -->
+    <section class="relative min-h-[50vh] flex items-center justify-center text-center px-6 pt-36 pb-20 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.95)), url('karan.jpg');">
         <div class="relative z-10 max-w-3xl mx-auto reveal">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 tracking-tight uppercase text-white">
                 Popular Services
@@ -89,11 +93,9 @@
         </div>
     </section>
 
-    <!-- Expert Meta Ads Services Section (As requested from your screenshot) -->
+    <!-- Expert Meta Ads Services Section -->
     <section class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900">
         <div class="grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Left Side: Showcase Image Box -->
             <div class="reveal">
                 <div class="relative group cursor-pointer">
                     <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
@@ -108,8 +110,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Right Side: Content -->
             <div class="reveal delay-150">
                 <span class="inline-block py-1 px-3 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-4 uppercase tracking-wider">
                     Targeted Reach
@@ -126,11 +126,10 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
 
-<!-- PORTFOLIO / OUR RESULTS SECTION (6 Compact Cards Grid) -->
+    <!-- PORTFOLIO / OUR RESULTS SECTION (6 Compact Cards Grid) -->
     <section class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-900">
         <div class="text-center max-w-3xl mx-auto mb-16 reveal">
             <span class="inline-block py-1 px-3 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-4 uppercase tracking-wider">
@@ -144,51 +143,43 @@
             </p>
         </div>
 
-        <!-- 3 Columns Grid for 6 Smaller Result Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
-            
             <!-- Result 1 -->
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-xl overflow-hidden group">
                 <div class="aspect-video bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden">
                     <img src="result1.jpg" alt="Campaign Result 1" class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 400 225\'><rect width=\'400\' height=\'225\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'12\'>result1.jpg</text></svg>';">
                 </div>
             </div>
-
             <!-- Result 2 -->
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-xl overflow-hidden group">
                 <div class="aspect-video bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden">
                     <img src="result2.jpg" alt="Campaign Result 2" class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 400 225\'><rect width=\'400\' height=\'225\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'12\'>result2.jpg</text></svg>';">
                 </div>
             </div>
-
             <!-- Result 3 -->
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-xl overflow-hidden group">
                 <div class="aspect-video bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden">
                     <img src="result3.jpg" alt="Campaign Result 3" class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 400 225\'><rect width=\'400\' height=\'225\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'12\'>result3.jpg</text></svg>';">
                 </div>
             </div>
-
             <!-- Result 4 -->
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-xl overflow-hidden group">
                 <div class="aspect-video bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden">
                     <img src="result4.jpg" alt="Campaign Result 4" class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 400 225\'><rect width=\'400\' height=\'225\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'12\'>result4.jpg</text></svg>';">
                 </div>
             </div>
-
             <!-- Result 5 -->
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-xl overflow-hidden group">
                 <div class="aspect-video bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden">
                     <img src="result5.jpg" alt="Campaign Result 5" class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 400 225\'><rect width=\'400\' height=\'225\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'12\'>result5.jpg</text></svg>';">
                 </div>
             </div>
-
             <!-- Result 6 -->
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-xl overflow-hidden group">
                 <div class="aspect-video bg-slate-950 rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden">
                     <img src="result6.jpg" alt="Campaign Result 6" class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 400 225\'><rect width=\'400\' height=\'225\' fill=\'%230f172a\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-family=\'sans-serif\' font-size=\'12\'>result6.jpg</text></svg>';">
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -235,7 +226,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="border-t border-slate-900 bg-slate-950 py-12 px-6 text-center text-slate-500 text-xs">
         <p>© 2026 VitalScale Media. All Rights Reserved.</p>
