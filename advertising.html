@@ -1,82 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advertising Services - VitalScale Media</title>
+    <title>Popular Services - VitalScale Media</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-white font-sans antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800 px-6 md:px-12 py-4 flex justify-between items-center">
-        <div class="text-xl font-extrabold tracking-wider text-white flex items-center gap-2">
-            <span class="text-blue-500 text-2xl">⚡</span> VitalScale Media
-        </div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300 items-center">
-            <a href="index.html" class="hover:text-blue-400 transition">Home</a>
-            <a href="about.html" class="hover:text-blue-400 transition">About Us</a>
-            <a href="video-editing.html" class="hover:text-blue-400 transition">Video Editing</a>
-            <a href="advertising.html" class="text-blue-400 font-semibold">Popular Service</a>
-            <a href="contact.html" class="hover:text-blue-400 transition">Contact Us</a>
-        </div>
-        <div>
-            <a href="contact.html" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-blue-600/30">
-                Book a Call
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                <span class="text-blue-500">VitalScale</span> Media
             </a>
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-blue-400 transition-colors">About Us</a>
+                <a href="video-editing.html" class="hover:text-blue-400 transition-colors">Video Editing</a>
+                <a href="advertising.html" class="text-blue-400 font-semibold">Popular Service</a>
+                <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Us</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Page Content -->
-    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Targeted Advertising Campaigns</h1>
-        <p class="text-slate-400 text-lg mb-12">Scale your business rapidly with high-performing Meta Ads and Google Ads campaigns designed to drive traffic, qualified leads, and maximum ROAS.</p>
-        
-        <div class="grid md:grid-cols-2 gap-8 text-left">
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-                <h3 class="text-2xl font-bold mb-3 text-blue-400">Meta Ads (Facebook & Instagram)</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Precision audience targeting, engaging creative ad copies, and optimized funnels to convert scrollers into loyal customers.</p>
-            </div>
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-                <h3 class="text-2xl font-bold mb-3 text-blue-400">Google Ads (Search & Performance Max)</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Capture high-intent search traffic right when your potential customers are looking for your services.</p>
-            </div>
+    <!-- Page Header -->
+    <section class="relative min-h-[40vh] flex items-center justify-center text-center px-6 pt-32 pb-12 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.95)), url('karan.jpg');">
+        <div class="relative z-10 max-w-3xl mx-auto reveal">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight uppercase text-white">
+                Popular Services
+            </h1>
+            <p class="text-slate-400 text-sm md:text-base">
+                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a> > <span class="text-blue-400">Popular Service</span>
+            </p>
         </div>
     </section>
 
-    <!-- Blue CTA Banner -->
-    <section class="bg-blue-600 py-16 px-6 text-center my-12 shadow-2xl shadow-blue-600/20">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Ready to Scale Your Ad Spend?</h2>
-        <a href="contact.html" class="inline-block bg-slate-950 text-white hover:bg-slate-900 font-bold px-8 py-4 rounded-xl transition">
-            Book a Free Call
-        </a>
+    <!-- Services Grid Section (Digital Ads & Website Development) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Service Card 1: Digital Advertising (Meta & Google Ads) -->
+            <div class="relative group cursor-pointer reveal bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl hover:border-blue-500/50 transition-all duration-300">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xl mb-6">
+                        📢
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight">
+                        Digital Advertising <span class="text-blue-400">(Meta & Google Ads)</span>
+                    </h3>
+                    <p class="text-slate-300 text-base leading-relaxed mb-6">
+                        Precision audience targeting, engaging creative ad copies, and optimized funnels on Facebook, Instagram, and Google Search to convert scrollers into high-paying loyal customers.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors">
+                        Get Started →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card 2: Website & Landing Page Development -->
+            <div class="relative group cursor-pointer reveal delay-100 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl hover:border-cyan-500/50 transition-all duration-300">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-500 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                <div class="relative">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-xl mb-6">
+                        💻
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight">
+                        Website & Landing Page <span class="text-cyan-400">Development</span>
+                    </h3>
+                    <p class="text-slate-300 text-base leading-relaxed mb-6">
+                        High-converting, lightning-fast, and mobile-optimized landing pages and websites designed specifically to maximize your lead generation and boost sales conversions.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 text-cyan-400 font-semibold hover:text-cyan-300 transition-colors">
+                        Get Started →
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-900 pt-16 pb-8 px-6 md:px-12 text-slate-400 text-sm">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-                <h3 class="text-white font-bold text-lg mb-4">VitalScale Media</h3>
-                <p class="text-xs leading-relaxed">India's top digital & video editing agency delivering cinematic results.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="video-editing.html" class="hover:text-blue-400">Video Editing</a></li>
-                    <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-400">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Contact Us</h4>
-                <p class="text-xs mb-2">📍 [Your Address Here]</p>
-                <p class="text-xs mb-2">✉️ [Your Email Here]</p>
-                <p class="text-xs">📞 [Your Phone Here]</p>
-            </div>
-        </div>
-        <div class="border-t border-slate-900 pt-6 text-center text-slate-600 text-xs">
-            © 2026 VitalScale Media. All Rights Reserved.
-        </div>
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 px-6 text-center text-slate-500 text-xs">
+        <p>© 2026 VitalScale Media. All Rights Reserved.</p>
     </footer>
+
+    <!-- Reveal Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll(".reveal").forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
