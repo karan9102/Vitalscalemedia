@@ -27,13 +27,12 @@
             <span class="text-blue-500 text-2xl">⚡</span> VitalScale Media
         </div>
         <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
-    <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
-    <a href="about.html" class="hover:text-blue-400 transition-colors">About Us</a>
-    <a href="video-editing.html" class="hover:text-blue-400 transition-colors">Video Editing</a>
-    <a href="advertising.html" class="hover:text-blue-400 transition-colors">Popular Service</a>
-    <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Us</a>
-</nav>
-        </div>
+            <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+            <a href="about.html" class="hover:text-blue-400 transition-colors">About Us</a>
+            <a href="video-editing.html" class="hover:text-blue-400 transition-colors">Video Editing</a>
+            <a href="advertising.html" class="hover:text-blue-400 transition-colors">Popular Service</a>
+            <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact Us</a>
+        </nav>
         <div>
             <a href="contact.html" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-blue-600/30">
                 Book a Call
@@ -42,7 +41,51 @@
     </nav>
 
     <!-- 1. Hero Section with Background Image & Transparent Dark Filter -->
-<!-- 2. Showreel / Documentary Video (Left) & About Us Section (Right) -->
+    <section class="relative min-h-[85vh] flex items-center justify-center text-left px-6 md:px-16 overflow-hidden bg-cover bg-center" style="background-image: url('profile.png');">
+        
+        <!-- Transparent Dark Filter / Overlay -->
+        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-[2px]"></div>
+
+        <!-- Hero Content Grid -->
+        <div class="relative z-10 max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center py-20 reveal">
+            <!-- Left Column: Text & CTA -->
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold tracking-wider uppercase mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Welcome to VitalScale Media
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-[1.1] uppercase text-white reveal">
+                    More Views, More Leads & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">More Sales.</span>
+                </h1>
+                
+                <p class="text-slate-300 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
+                    Powerful video editing and digital marketing built to grow your audience and business.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 reveal">
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+                        Book a Free Call
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Watch Now Showreel Badge Card -->
+            <div class="hidden md:flex justify-center items-center">
+                <div class="relative group cursor-pointer reveal">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-300"></div>
+                    <div class="relative bg-slate-900/90 border border-slate-800 p-6 rounded-2xl text-center shadow-2xl backdrop-blur-md">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/50">
+                            <svg class="w-8 h-8 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-white text-sm tracking-wider uppercase">Watching Now</h4>
+                        <p class="text-xs text-slate-400 mt-1">Explore our agency showreel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Showreel / Documentary Video (Left) & About Us Section (Right) -->
     <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             
@@ -82,46 +125,29 @@
         </div>
     </section>
 
-    <!-- 2. s & About Us Section -->
-<!-- 2. Showreel / Documentary Video (Left) & About Us Section (Right) -->
-    <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- LEFT SIDE: Video Showreel / Sample -->
-            <div class="reveal">
-                <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-blue-500 pl-4">Documentary video sample</h3>
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-                    <div class="aspect-video w-full">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/GHdS0FrCdME" title="Documentary Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 px-6 text-center text-slate-500 text-xs">
+        <p>© 2026 VitalScale Media. All Rights Reserved.</p>
+    </footer>
 
-            <!-- RIGHT SIDE: About Us Content Block -->
-            <div class="space-y-6 reveal delay-150">
-                <span class="inline-block text-blue-400 text-xs font-bold uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">About Us</span>
-                
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                    Let's make <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">great things</span>
-                </h2>
-                
-                <p class="text-slate-300 text-base leading-relaxed">
-                    At VitalScale Media, every pixel is infused with creativity, and every frame tells a compelling story. We understand the power of visual storytelling and its impact on your audience. With a dedication to excellence and precision, we craft captivating videos that inspire and deliver meaningful results. Your vision is our top priority, and we ensure timely delivery on every project.
-                </p>
-                
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    We don't just meet expectations – we exceed them. Let's bring your ideas to life and create something extraordinary together.
-                </p>
-                
-                <div class="pt-2">
-                    <a href="contact.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
-                        Book a Free Call
-                    </a>
-                </div>
-            </div>
+    <!-- Reveal Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.15 });
 
-        </div>
-    </section>
+            document.querySelectorAll(".reveal").forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
 
 <!-- Animated Stats Section with Slide-Up & Counting Effect -->
     <section id="stats-section" class="py-20 bg-slate-900/50 border-y border-slate-900">
